@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cargarvalores(valor)
+        {
+            var f;
+            for(f=0;f<valor.length;f++)
+            {
+                var num;
+                num=prompt("ingrese un numero: ");
+                valor[f]=parseInt(num);
+            }
+        }
+
+        function calcular(valor)
+        {
+            var acumulador=0;
+            var acu36=0;
+            var acu50=0;
+            
+            
+            for(f=0;f<valor.length;f++)
+            {
+                acumulador=acumulador+valor[f];
+                if(valor[f]>36)
+                {
+                    acu36=acu36+valor[f];
+                }
+                if(valor[f]>50)
+                {
+                    acu50++;
+                    
+                }
+            }
+            document.write("valor acumulado: "+acumulador);
+            document.write("<br>"); 
+            
+            
+            
+                
+                
+            
+            document.write("valor acumulado mas de 36: "+acu36);
+            document.write("<br>"); 
+
+            
+            document.write("total mas de 50: "+acu50);
+        }
+
+
+        var valor;
+        valor=new Array(8);
+        cargarvalores(valor);
+        calcular(valor);
+
+
+        function cargar(vec) 
+ { 
+ var f; 
+ for(f=0;f<vec.length;f++) 
+ { 
+ vec[f]=prompt("Ingrese valor:",""); 
+ vec[f]=parseInt(vec[f]); 
+ } 
+ } 
+ function sumarVectores(vector1,vector2,vecSuma) 
+ { 
+ var f; 
+ for(f=0;f<vector1.length;f++) 
+ { 
+ vecSuma[f]=vector1[f]+vector2[f]; 
+ } 
+ } 
+ function imprimir(vec) 
+ { 
+ var f; 
+ for(f=0;f<vec.length;f++) 
+ { 
+ document.write(vec[f]+" "); 
+ } 
+ document.write("<br>"); 
+ } 
+ 
+ var vector1; 
+ vector1=new Array(3); 
+ var vector2; 
+ vector2=new Array(3); 
+ cargar(vector1); 
+ cargar(vector2); 
+ var vecSuma; 
+ vecSuma=new Array(3); 
+ sumarVectores(vector1,vector2,vecSuma); 
+ document.write("Primer vector:<br>"); 
+ imprimir(vector1); 
+ document.write("Segundo vector:<br>"); 
+ imprimir(vector2); 
+ document.write("Vector resultante:<br>"); 
+ imprimir(vecSuma);
+
+
+var cadena=prompt("Ingrese una cadena:","");
+ document.write("La cadena ingresada es:"+cadena);
+ document.write("<br>");
+ document.write("La cantidad de caracteres son:"+cadena.length);
+ document.write("<br>");
+ document.write("El primer caracter es:"+cadena.charAt(0));
+ document.write("<br>");
+ document.write("Los primeros 3 caracteres son:"+cadena.substring(0,3));
+ document.write("<br>");
+ if (cadena.indexOf("hola")!=-1)
+ document.write("Se ingresó la subcadena hola");
+ else
+ document.write("No se ingresó la subcadena hola");
+ document.write("<br>");
+ document.write("La cadena convertida a mayúsculas es:"+cadena.toUpperCase());
+ document.write("<br>");
+ document.write("La cadena convertida a minúsculas es:"+cadena.toLowerCase());
+ document.write("<br>");
+    var nombre;
+    var contador= -1;
+    while(nombre!="fin"){
+        nombre=prompt("ingrese un nombre: ");
+        contador++;
+    }
+    document.write("la cantidad de nombres ingresados son: "+contador);
+
+
+    var nombre;
+    var contador= -1;
+    
+    while(nombre!="FIN"){
+        nombre=prompt("ingrese un nombre: ");
+        nombre= nombre.toUpperCase();
+        contador++;
+    }
+    document.write("la cantidad de nombres ingresados son: "+contador);
+    
+
+    var cadena = "Esto es una prueba";
+var palabra = "hola";
+
+var index = cadena.indexOf(palabra);
+
+if(index >= 0) {
+    document.write("la palabra existe dentro de la cadena y se encuentra en la posición " + index);
+} else {
+    document.write("la palabra no existe dentro de la cadena");
+}
+
+var cadena;
+cadena=prompt("Ingrese una palabra: ");
+
+var f;
+var palindrome=true;
+for(f=0;f<cadena.length/2;f++){
+    if(cadena.charAt(f)!=cadena.charAt(cadena.length-1 -f))
+    palindrome=false;
+}
+document.write("La palabra: "+cadena);
+ document.write("<br>");
+ if (palindrome)
+ document.write("Es palíndrome");
+ else
+ document.write("No es palíndrome");
+
+var email;
+
+email=prompt("Ingrese un email: ");
+
+if (email.indexOf("@")!=-1){
+    document.write("El email ingresado lleva @");
+}
+else{
+    document.write("El email ingresado no lleva @");
+}
+
+
+   
+
+function imprimirMitad(cadena)
+ {
+ document.write("Primera mitad de caracteres de la cadena:");
+ var f;
+ for(f=0;f<cadena.length/2;f++)
+ {
+ document.write(cadena.charAt(f));
+ }
+ document.write("<br>");
+ }
+ function ultimoCaracter(cadena)
+ {
+ document.write("Ultimo caracter:");
+ document.write(cadena.charAt(cadena.length-1));
+ document.write("<br>");
+ }
+ function formaInversa(cadena)
+ {
+ document.write("Forma inversa:");
+ for(f=cadena.length-1;f>=0;f--)
+ {
+ document.write(cadena.charAt(f));
+ }
+ document.write("<br>");
+ }
+ function separadoGuion(cadena)
+ {
+ document.write("Separado por guión:");
+ var f;
+ for(f=0;f<cadena.length;f++)
+ {
+ document.write(cadena.charAt(f)+"-");
+ }
+ document.write("<br>");
+ }
+ function cantidadVocales(cadena)
+ {
+ var f;
+ var nueva=cadena.toUpperCase();
+ var cant=0;
+ for(f=0;f<cadena.length;f++)
+ {
+ if (nueva.charAt(f)=='A' || nueva.charAt(f)=='E' ||
+ nueva.charAt(f)=='I' || nueva.charAt(f)=='O' ||
+ nueva.charAt(f)=='U')
+ {
+ cant++;
+ }
+ }
+ document.write("Cantidad de vocales:"+cant);
+ }
+ 
+
+// Programa Principal
+ var cadena;
+ cadena=prompt("Ingrese una cadena:","");
+ imprimirMitad(cadena);
+ ultimoCaracter(cadena);
+ formaInversa(cadena);
+ separadoGuion(cadena);
+ cantidadVocales(cadena); 
+
+
+
+ var cadena;
+ cadena=prompt("Ingrese una cadena:","");
+
+ function separadoGuion(cadena)
+ {
+ document.write("Separado por guión:");
+ var f;
+ for(f=0;f<cadena.length;f++)
+ {
+ document.write(cadena.charAt(f));
+ }
+}
+separadoGuion(cadena);
+
+
+    </script>
+</body>
+</html>

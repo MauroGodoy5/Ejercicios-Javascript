@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x;
+        x=1;
+        while(x<=100){
+            document.write(x);
+            document.write("<br>");
+            x=x+1;
+        }
+
+        var x;
+        x=1;
+        while(x<=500){
+            document.write(x);
+            document.write("<br>");
+            x=x+1;
+        }
+          var x;
+        x=50;
+        while(x<=100){
+            document.write(x);
+            document.write("<br>");
+            x=x+1;
+        }
+
+        var x;
+        x=-50;
+        while(x<=0){
+            document.write(x);
+            document.write("<br>");
+            x=x+1;
+        }
+
+        var x;
+        x=2;
+        while(x<=100){
+            document.write(x);
+            document.write("<br>");
+            x=x+2;
+        }
+
+        var x;
+        x=1;
+        var valorfinal;
+        valorfinal=prompt("INGRESE EL VALOR FINAL: ");
+        valorfinal=parseInt(valorfinal);
+        while(x<=valorfinal){
+            document.write(x);
+            document.write("<br>");
+            x=x+1;
+
+        }
+
+        var x=1;
+        var suma=0;
+        var valor;
+        while(x<=5){
+            valor=prompt("ingrese el valor: ");
+            valor=parseInt(valor);
+            suma=suma+valor;
+            x=x+1;
+        }
+        document.write("La suma es :"+suma);
+        var prom=suma/5;
+        document.write("el promedio es: "+prom);
+
+//1 - Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas
+//mayores o iguales a 7 y cuántos menores. 
+        var x=1;
+        var nota;
+        var notamayor=0;
+        var notamenor=0;
+        while(x<=10){
+            nota=prompt("ingrese la nota: ");
+            nota=parseInt(nota);
+            x=x+1;
+            if(nota>=7)
+            {
+            notamayor++;
+            
+            }
+        else 
+            {
+            notamenor++;
+            
+            }
+        
+        }
+        
+        
+        
+        document.write("las notas menores a 7 son: "+notamenor);
+        document.write("<br>");
+        document.write("las notas mayores o iguales a 7 son: "+notamayor);
+        
+            //2 - Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio
+            //de las personas. 
+        var x=1;
+        var altura;
+        var suma=0;
+        while(x<=5){
+            altura=prompt("ingrese la altura: ");
+            altura=parseFloat(altura);
+            suma=suma+altura;
+            x=x+1;
+            
+        }
+        document.write("la altura es: "+altura);
+        var prom=suma/5;
+        document.write("la altura promedio es: "+prom);
+        //3 - En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar
+//un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados
+//cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá
+//informar el importe que gasta la empresa en sueldos al personal. 
+
+        var x=1;
+        var sueldo;
+        var sueldomayor=0;
+        var sueldomenor=0;
+        while(x<=5){
+            sueldo=prompt("ingrese el sueldo: ");
+            sueldo=parseFloat(sueldo);
+            x=x+1;
+            if(sueldo>=100&&sueldo<=300)
+            {
+            sueldomenor++;
+            
+            }
+        else 
+            {
+            sueldomayor++;
+            
+            }
+        
+        }
+        
+        
+        
+        document.write("Los empleados que cobran entre 100 y 300 son: "+sueldomenor);
+        document.write("<br>");
+        document.write("los empleados que cobran mas de 300 son: "+sueldomayor);
+        //4 - Realizar un programa que imprima 25 términos de la serie 11 - 22 - 33 - 44, etc. (No se
+        //ingresan valores por teclado). 
+        var x;
+        x=11;
+        document.write("Impresión de los 25 términos de la serie 11 - 22 - 33 - 44 ... <br>");
+        document.write("<br>");
+        var termino=11;
+        var x=1;
+        while(x<=25){
+            document.write(termino+"-");
+            x++;
+            termino=termino+11;
+        }
+
+        
+        document.write("multiplos de 8 hasta el 500");
+        document.write("<br>");
+        //5 - Mostrar los múltiplos de 8 hasta el valor 500.
+            //Debe aparecer en pantalla 8 -16 -24, etc. 
+        var x=1;
+        while(x<=500){
+            x++;
+            if(x %8 ===0){
+                document.write(x+"-");
+            }
+        }
+
+        /*6 - Realizar un programa que permita cargar dos listas de 3 valores cada una. Informar con
+un mensaje cual de las dos listas tiene un valor acumulado mayor (mensajes 'Lista 1 mayor',
+'Lista 2 mayor', 'Listas iguales').
+Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo. 
+ */
+        var x=1;
+        var num;
+        var suma1=0;
+        var suma2=0;
+        document.write("primera lista");
+        document.write("<br>");
+        while(x<=3){
+            num=prompt("ingrese un numero(primera lista): ");
+            num=parseInt(num);
+            suma1=suma1+num;
+            x++;
+            document.write(num);
+            document.write("-");
+        }
+        /* 7 - Desarrollar un programa que permita cargar 5 números enteros y luego nos informe
+cuántos valores fueron pares y cuántos impares.
+Emplear el operador “%” en la condición de la estructura condicional.
+ if (valor%2==0) */
+        x=1; 
+        document.write("<br><br>"); 
+        document.write("Segunda lista"); 
+        document.write("<br>");
+        while(x<=3){
+            num=prompt("ingrese un numero(segunda lista): ");
+            num=parseInt(num);
+            suma2=suma2+num;
+            x++;
+            document.write(num);
+            document.write("-");
+        }
+        document.write("<br><br>"); 
+        if(suma1>suma2){
+            document.write("la lista 1 tiene un valor mayor acumulado");
+        }
+        else{
+            if(suma2>suma1){
+                document.write("la lista 2 tiene un valor mayor acumulado");
+            }
+            else{
+                document.write("Ambas listas tienen valores acumuladosiguales"); 
+            }
+        }
+
+        /* El operador “%” retorna el resto de la división valor / 2. Por ejemplo: 12 % 2, retorna 0; 13
+% 2, retorna 1, porque el resto de dividir 13 en 2 es 1. 
+*/
+        var x=1;
+        var valor;
+        var valorpar=0;
+        var valorimpar=0;
+        while(x<=5){
+            valor=prompt("ingrese un valor: ");
+            valor=parseInt(valor);
+            if(valor%2==0){
+            
+            valorpar++;
+            }
+            else{
+            
+            valorimpar++;
+            }
+            x++;
+        }
+        
+        document.write("los valores pares son: "+valorpar);
+        document.write("<br>"); 
+        document.write("los valores impares son: "+valorimpar);
+    </script>
+    
+</body>
+</html>

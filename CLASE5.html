@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script languaje="javascript">
+    function mayordeellos(x1,x2,x3)
+    {
+        if (x1>x2 && x1>x3)
+        {
+            return x1;
+        }
+        else
+            {
+                if (x2>x3 && x2>x1)
+                {
+                return x2;
+                }
+                else
+                {
+                    return x3;
+                }
+            } 
+    }
+    var valor1;
+    var valor2;
+    var valor3;
+    valor1=prompt("ingrese un valor: ");
+    valor1=parseInt(valor1);
+    valor2=prompt("ingrese un valor: ");
+    valor2=parseInt(valor2);
+    valor3=prompt("ingrese un valor: ");
+    valor3=parseInt(valor3);
+    var mayo;
+    mayo=mayordeellos(valor1,valor2,valor3);
+    document.write("los valores ingresados fueron: "+valor1+","+valor2+","+valor3);
+    document.write("<br>"); 
+    document.write("el mayor es: "+mayo);
+
+        
+    function perimetro(lado1,lado2,lado3,lado4)
+    {
+        var suma=0;
+        suma=lado1+lado2+lado3+lado4;
+        return suma;
+    }
+    
+    
+        var valor1;
+        var valor2;
+        var valor3;
+        var valor4;
+
+        valor1=prompt("ingrese el valor de un lado: ");
+        valor1=parseInt(valor1);
+
+        valor2=prompt("ingrese el valor de un lado: ");
+        valor2=parseInt(valor2);
+
+        valor3=prompt("ingrese el valor de un lado: ");
+        valor3=parseInt(valor3);
+
+        valor4=prompt("ingrese el valor de un lado: ");
+        valor4=parseInt(valor4);
+        
+        var peri;
+    peri=perimetro(valor1,valor2,valor3,valor4);
+    document.write("el valor ingresado fue: "+valor1+","+valor2+","+valor3+","+valor4);
+    document.write("<br>"); 
+    document.write("el perimetro del cuadrado es: "+peri);
+
+
+
+    function retornarvalor(valor)
+    {
+        if(valor<10){
+            return document.write("tiene 1 digito");
+        }
+        else{
+            if(valor<100){
+                return document.write("tiene 2 digitos");
+            }
+            else{
+                if(valor<1000){
+                    return document.write("tiene 3 digitos");
+                }
+                else{
+                    return document.write("tiene mas de 3 digitos");
+                }
+            }
+        }
+    }
+    var numero;
+    numero=prompt("ingrese un numero: ");
+    numero=parseInt(numero)
+    
+    var f;
+    f=retornarvalor(numero);
+    document.write("<br>"); 
+    document.write("el valor ingresado fue: "+numero);
+
+
+    function promedio3enteros()
+    {
+        
+        var numero;
+        var f;
+        var suma=0;
+        var prom=0;
+    for(f=1;f<=3;f++)
+        {
+            numero=prompt("ingrese un numero: ");
+            numero=parseInt(numero);
+            suma=suma+numero;
+            prom=suma/3;
+        }
+        
+        return prom;
+    }
+    
+
+        var p;
+    var p=promedio3enteros();
+    document.write("el promedio de los tres valores es: "+p);
+    
+    function sumaCincoValores() 
+{ 
+    var valor; 
+    var f; 
+    var suma=0; 
+        for(f=1;f<=5;f++) 
+        { 
+            valor=prompt("Ingrese valor",""); 
+            valor=parseInt(valor); 
+            suma=suma+valor; 
+        } 
+    return suma; 
+} 
+
+var s=sumaCincoValores(); 
+document.write("La suma de los 5 valores es:"+s);
+
+    </script>
+</body>
+</html>

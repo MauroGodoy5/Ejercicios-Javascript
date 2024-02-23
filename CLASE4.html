@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script languaje="javascript">
+        var valor;
+        do {
+        valor=prompt("Ingrese un valor entre 0 y 999:","");
+        valor=parseInt(valor);
+        document.write("El valor "+valor+" tiene ");
+        if (valor<10)
+        {
+        document.write("Tiene 1 digitos");
+        }
+        else
+        {
+        if (valor<100)
+        {
+        document.write("Tiene 2 digitos");
+        }
+        else
+        {
+        document.write("Tiene 3 digitos");
+        }
+        }
+        document.write("<br>");
+        } while(valor!=0);
+
+        var valor;
+        var suma=0;
+        do{
+            
+            valor=prompt("ingrese un valor: ");
+            valor=parseInt(valor);
+            suma=suma+valor;
+            document.write("valor acumulado: "+suma+"</br>");
+            if(valor==0){
+                document.write(" es cero ");
+            }
+            else{
+                if(valor>0){
+                    document.write(" es mayor a 0 ");
+                }
+                else{
+                    document.write("es  menor a cero ");
+                }
+            }
+            
+            
+        }while(valor!=9999);
+        
+
+        var nrocuenta;
+        var nombre;
+        var saldo;
+        var total=0;
+        do{
+            
+            nrocuenta=prompt("ingrese un numero de cuenta: ");
+            nrocuenta=parseInt(nrocuenta);
+            if (nrocuenta>0)
+        {
+            nombre=prompt("ingrese un nombre: ");
+            saldo=prompt("ingrese un saldo: ");
+            saldo=parseFloat(saldo);
+            if(saldo>0){
+                document.write(nombre+"tiene un saldo ACREEDOR de: "+saldo);
+                total=total+saldo;
+            }
+            else{
+                if(valor<0){
+                    document.write(nombre+" tiene un saldo DEUDOR de"+saldo);
+                }
+                else{
+                    document.write(nombre+" tiene un saldo NULO de"+saldo);
+                }
+            }
+        }
+            
+        document.write("<br>");
+        document.write("EL SALDO TOTAL DE LOS ACREEDORES ES: "+total);
+        }while(nrocuenta>0);
+
+
+        var documento;
+        var edad;
+        var sexo;
+        var cantpersonas=0;
+        var cantvarones=0;
+        var cantmujeres=0;
+        var cantvaronesentre=0;
+        do{
+            documento=prompt("ingrese el numero de documento: ");
+            documento=parseInt(documento);
+            if(documento!=0){
+            edad=prompt("ingrese la edad: ");
+            edad=parseInt(edad);
+            sexo=prompt("ingrese el sexo(masculino/femenino): ");
+            cantpersonas++;
+            if(sexo=="masculino")
+            {
+                cantvarones++;
+            }
+            
+            if(edad>=16&&edad<=65)
+            {
+                cantvaronesentre++;
+            }
+            else{
+                cantmujeres++;
+            }
+            document.write("<br>"+"nro de documento:"+documento+"<br>"+" edad:"+edad+"<br>"+"sexo:"+sexo);
+            }
+        
+        }while(documento!=0)
+        document.write("<br>");
+        document.write("Datos estadísticos.");
+        document.write("<br>");
+        document.write("Cantidad de personas censadas:"+cantpersonas);
+        document.write("<br>");
+        document.write("Cantidad de varones:"+cantvarones);
+        document.write("<br>");
+        document.write("Cantidad de mujeres:"+cantmujeres);
+        document.write("<br>");
+        document.write("Cantidad de varones con edades entre 16 y 65:"+cantvaronesentre); 
+
+        var cant;
+        cant=prompt("ingrese la cantidad de triangulos a procesar: ");
+        cant=parseInt(cant);
+        var f;
+        var base,altura;
+        var superficie12=0;
+        for(f=1;f<=cant;f++){
+            base=prompt("Ingrese valor de la base:","");
+            base=parseInt(base);
+            altura=prompt("Ingrese valor de la altura:","");
+            altura=parseInt(altura);
+            var superficie
+            superficie=(base*altura)/2;
+            if(superficie12>12){
+                superficie12++;
+            }
+            document.write("Base:"+base+" Altura:"+altura+"Superficie="+superficie);
+            document.write("<br>"); 
+
+        }
+        document.write("La cantidad de triángulos ingresados con unasuperficie mayor a 12 es "+superficie12);
+
+        var numero;
+        var suma=0;
+        var f;
+        for(f=1;f<=10;f++){
+            
+            numero=prompt("ingrese un numero: ");
+            numero=parseInt(numero);
+            if(f>5){
+                suma=suma+numero;
+                
+            }
+            
+        }
+    document.write("la suma apartir de el quinto numero es: "+suma);
+
+
+    var f;
+    for(f=5;f<=50;f+=5){
+        document.write(f+" ");
+    }
+    
+    var num;
+    num=prompt("ingrese que tabla de multiplicar desea generar: ");
+    num=parseInt(num);
+    var tabla;
+    document.write("tabla del "+num+"<br><br>")
+    var f;
+    for(f=1;f<=12;f++){
+        tabla=f*num;
+        document.write(f+"*"+num+"="+tabla+"<br>");
+    }
+
+    var triangulos;
+    triangulos=prompt("ingrese la cantidad de triangulos a cargar: ");
+    triangulos=parseInt(triangulos);
+
+    var equilatero=0;
+    var iscoceles=0;
+    var escaleno=0;
+
+    for(f=1;f<=triangulos;f++){
+        var lado1,lado2,lado3;
+        lado1=prompt("ingrese un lado: ");
+        lado1=parseInt(lado1);
+        lado2=prompt("ingrese un lado: ");
+        lado2=parseInt(lado2);
+        lado3=prompt("ingrese un lado: ");
+        lado3=parseInt(lado3);
+        if(lado1==lado2&&lado1==lado3){
+            document.write("triangulo equilatero"+"<br>");
+            equilatero++;
+        }
+        else{
+            if(lado1==lado2){
+                document.write("triangulo iscoceles"+"<br>");
+                iscoceles++;
+            }
+            else{
+                document.write("triangulo escaleno"+"<br>");
+                escaleno++;
+            }
+        }
+        if(equilatero<iscoceles&&equilatero<escaleno){
+            document.write("el que tien menor cantidad es el triangulo equilatero");
+        }
+        else{
+            if(iscoceles<equilatero&&iscoceles<escaleno){
+                document.write("el que tiene menor cantidad es el triangulo iscoceles ");
+            }
+            else
+            if(escaleno<iscoceles&&escaleno<equilatero){
+                document.write("el que tien menor cantidad es el triangulo escaleno");
+            }
+        }
+    }
+    document.write("<br>"); 
+    document.write("triangulo equilatero: "+equilatero+"<br>"+"triangulo iscoceles: "+iscoceles+"<br>"+"triangulo escaleno: "+escaleno+"<br>");
+    document.write("<br>"); 
+
+
+    var puntos;
+    puntos=prompt("ingrese la cantidad de puntos a procesar: ");
+    puntos=parseInt(puntos);
+    var f;
+    for(f=1;f<=puntos;f++)
+    {
+        var x,y;
+        var cuadrante1=0;
+        var cuadrante2=0;
+        var cuadrante3=0;
+        var cuadrante4=0;
+        x=prompt("ingrese el valor de x: ");
+        x=parseInt(x);
+        y=prompt("ingrese el valor de y: ");
+        y=parseInt(y);
+
+        if(x>0&&y>0){
+            document.write("CUADRANTE 1"+"<br>");
+            cuadrante1++;
+        }
+        else{
+            if(x<0&&y>0){
+            document.write("CUADRANTE 2"+"<br>");
+            cuadrante2++;
+            }
+            else
+            {
+                if(x<0 && y<0){
+                    document.write("CUADRANTE 3"+"<br>");
+                    cuadrante3++;
+                }
+                else{
+                    if(x>0 && y<0){
+                        document.write("CUADRANTE 4"+"<br>");
+                        cuadrante4++;
+                    }
+                    else{
+                        document.write("se encuentra sobre el eje"+"<br>");
+                    }
+                }
+            }
+        }
+
+    }
+    document.write("<br>"+"los puntos totales en el primer cuadrante son: "+cuadrante1+"<br>"+"en el cuadrante2 son: "+cuadrante2+"<br>"+"en el cuadrante3 son: "+cuadrante3+"<br>"+" en el cuadrante4 son:"+cuadrante4);
+    
+
+    var negativos=0;
+    var positivos=0;
+    var multi15=0;
+    var pares=0;
+    var f;
+    for(f=1;f<=10;f++){
+        var numero;
+        numero=prompt("ingrese un numero: ");
+        numero=parseInt(numero);
+        if(numero>0){
+            positivos++;
+        }
+        if(numero<0){
+            negativos++;
+        }
+        if(numero%2==0){
+            pares++;
+        }
+        if(numero>0&&numero%15==0){
+            multi15++;
+        }
+    }
+    document.write("<br>"+"los numeros positivos son: "+positivos+"<br>"+"los numeros negativos son: "+negativos+"<br>"+"losnumeros multiplos de 15 son: "+multi15+"<br>"+"los numeros pares son en total "+pares+"<br>");
+
+        var f;
+        for(f=1;f<=3;f++){
+            var edad;
+            edad=prompt("ingrese la edad: ");
+            edad=parseInt(edad);
+            var prommañana;
+            var promtarde;
+            var promnoche;
+            var suma=0;
+            suma=suma+edad;
+            prommañana=(edad+suma)/50;
+            promtarde=(edad+suma)/60;
+            promnoche=(edad+suma)/110;
+            
+
+        }
+        if(prommañana>promtarde&&prommañana>promnoche){
+                document.write("el promedio mas alto de edad es el del turno mañana");
+            }
+            else{
+                if(promtarde>prommañana&&promtarde>promnoche){
+                    document.write("el promedio mas alto de edad es el del turno tarde");
+                }
+                else{
+                    document.write("el promedio mas alto de edad es el del turno noche");
+                }
+            }
+        document.write("<br>"+"promedio de edad del turno mañana: % "+prommañana+"<br>"+"promedio de edad del turno tarde: % "+promtarde+"<br>"+"promedio de edad del turno noche: % "+promnoche+"<br>");
+
+        
+    </script>
+</body>
+</html>

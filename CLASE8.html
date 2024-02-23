@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function validar(){
+            var t1=(document.form1.text1.value);
+            var t2=(document.form1.text2.value);
+            if(t1==t2){
+                alert("las claves son iguales");
+            }
+            else{
+                alert("las claves son distintas");
+            }
+        }
+    </script>
+
+    <form action="" name="form1">
+        <INPUT TYPE="password"NAME="text1">
+        <INPUT TYPE="password"NAME="text2"> 
+            <INPUT TYPE="button" ONCLICK="validar()" VALUE="validar">
+    </form> -->
+
+
+    <!-- <script>
+        function precio(){
+            document.form1.T3.value = document.form1.D1.options
+[document.form1.D1.selectedIndex].value;
+        }
+    </script>
+
+
+
+
+    <form name="form1">
+        <p>SELECCIONE SU PIZZA</p>
+        <p><select size="1" name="D1" onChange="precio()">
+        <option value="$250">muzarella</option>
+        <option value="$450">especial</option>
+        <option value="$550">roquefort</option>
+        </select></p>
+        <p>PRECIO:<input type="text" name="T3" size="20"></p>
+    </form> -->
+
+
+    <script>
+        function calcular(){
+            var micro = parseInt (document.form1.H1.options
+            [document.form1.H1.selectedIndex].value);
+            var monitor = parseInt (document.form1.H2.options
+            [document.form1.H2.selectedIndex].value);
+            var disco = parseInt (document.form1.H3.options
+            [document.form1.H3.selectedIndex].value);
+
+            document.form1.T1.value=micro+monitor+disco;
+        }
+    </script>
+
+
+    <form name="form1">
+        <p>PROCESADOR</p>
+        <p><select size="1" name="H1">
+        <option value="250">AMD-$250</option>
+        <option value="450">RYZEN-$450</option>
+        <option value="550">INTEL-$550</option>
+        </select></p>
+
+        <p>MONITOR</p>
+        <p><select size="1" name="H2">
+        <option value="1000">LG-$1000</option>
+        <option value="2000">SAMSUNG-$2000</option>
+        <option value="5000">VIEWSONIC-$5000</option>
+        </select></p>
+
+        <p>DISCO DURO</p>
+        <p><select size="1" name="H3">
+        <option value="50">WESTERN DIGITAL-$50</option>
+        <option value="100">TOSHIBA-$100</option>
+        <option value="580">KINGSTON-$580</option>
+        </select></p>
+    
+        <p><input type="button" value="Calcular" name="B1"onClick="calcular()"></p> 
+        <p>Presupuesto:<input type="text" name="T1" size="20"></p>
+    </form>
+
+    <!-- <script>
+        function calcular(){
+            var p = parseInt (document.form1.D1.options
+            [document.form1.D1.selectedIndex].value);
+            var c =parseInt(document.form1.C1.value);
+
+            document.form1.T1.value=p*c;
+        }
+    </script>
+
+    <form name="form1">
+        <p>SELECCIONE SU PIZZA</p>
+        <p><select size="1" name="D1">
+        <option value="250">muzarella</option>
+        <option value="450">especial</option>
+        <option value="550">roquefort</option>
+        </select></p>
+        <p>CANTIDAD</p>
+        <INPUT TYPE="text" NAME="C1">
+
+            <p><input type="button" value="Calcular" name="B1"onClick="calcular()"></p> 
+            <p>TOTAL:<input type="text" name="T1" size="20"></p>
+    </form> -->
+
+
+
+    <!-- <script languaje="JavaScript">
+        function verResultados()
+        {
+        var correctas=0;
+        var incorrectas=0;
+        var s1 = document.form1.D1.options
+       [document.form1.D1.selectedIndex].text;
+        if (s1=="Un lenguaje para extender las capacidades de HTML")
+        correctas++;
+        else
+        incorrectas++;
+        var s2 = document.form1.D2.options
+       [document.form1.D2.selectedIndex].text;
+        if (s2=="Solo un editor de texto y un navegador.")
+        correctas++;
+        else
+        incorrectas++;
+        var s3 = document.form1.D3.options
+       [document.form1.D3.selectedIndex].text;
+        if (s3=="Si")
+        correctas++;
+        else
+        incorrectas++;
+        var s4 = document.form1.D4.options
+       [document.form1.D4.selectedIndex].text;
+        if (s4=="No")
+        correctas++;
+        else
+        incorrectas++;
+        document.form1.T1.value=correctas;
+        document.form1.T2.value=incorrectas;
+        }
+       </script>
+       <form name="form1">
+       <p>Qué es JavaScript?<select size="1" name="D1">
+        <option>Un lenguaje para extender las capacidades de
+       HTML</option>
+        <option>Un lenguaje de bajo nivel</option>
+        <option>Un lenguaje para la administración de bases de
+       datos</option>
+       </select></p>
+       <p>Que necesitamos para comenzar a programar en JavaScript?<select
+       size="1" name="D2">
+        <option>Solo un editor de texto y un navegador.</option>
+        <option>Un servidor de Internet</option> 
+        <option>Programar en Java</option>
+</select></p>
+<p>var es una palabra clave del lenguaje JavaScrip?:<select
+size="1" name="D3">
+ <option>Si</option>
+ <option>No</option>
+</select></p>
+<p>repeat es una palabra clave de JavaScript?<select size="1"
+name="D4">
+ <option>Si</option>
+ <option>No</option>
+</select></p>
+<p><input type="button" value="Ver resultados" name="B1"
+onClick="verResultados()"></p>
+<p>Cantidad de correctas:<input type="text" name="T1"
+size="20"></p>
+<p>Cantidad de incorrectas:<input type="text" name="T2"
+size="20"></p>
+</form>  -->
+ 
+</body>
+</html>
